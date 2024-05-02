@@ -4,4 +4,5 @@ class Solution:
         t=sorted(t)
         if s==t:
             return True
-        else:return False
+        else:
+            return False
