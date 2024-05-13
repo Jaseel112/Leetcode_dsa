@@ -1,7 +1,7 @@
 class Solution:
     def findRelativeRanks(self, score: List[int]) -> List[str]:
         data=[]
-        rank=[0]*len(score)
+        rank=[""]*len(score)
         for i in range(len(score)):
             data.append((score[i],i))
         data.sort(reverse=True)
