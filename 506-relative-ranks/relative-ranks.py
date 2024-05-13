@@ -1,19 +1,18 @@
 class Solution:
     def findRelativeRanks(self, score: List[int]) -> List[str]:
-        data=sorted(enumerate(score),key=lambda x:x[1],reverse=True)
+        data=[]
         rank=[0]*len(score)
-        j=0
-        for i in data:
-            if j==0:
-             rank[i[0]]="Gold Medal"
-             j+=1
-            elif j==1:
-                rank[i[0]]="Silver Medal"
-                j+=1 
-            elif j==2:
-                rank[i[0]]="Bronze Medal"
-                j+=1  
-                print(rank)
+        for i in range(len(score)):
+            data.append((score[i],i))
+        data.sort(reverse=True)
+        for k in range (len(score)):
+            i=data[k][1]
+            if k==0:
+                rank[i]="Gold Medal"
+            elif k==1:
+                rank[i]="Silver Medal"
+            elif k==2:
+                rank[i]="Bronze Medal"
             else:
-                rank[i[0]]=str(data.index(i)+1)
+                rank[i]=str(k+1)
         return rank
