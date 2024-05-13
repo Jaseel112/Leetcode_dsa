@@ -5,5 +5,4 @@ class Solution:
         while nums :
             p1, p2 = nums.pop(), nums.pop()
             sm += p2
-            print(p1,p2,sm)
         return sm
