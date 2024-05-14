@@ -13,8 +13,7 @@ class Solution:
             curr.next=prev
             prev=curr
             curr=next1
-        head=prev
-        return head
+        return prev
             
         
 
