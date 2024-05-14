@@ -6,11 +6,11 @@
 
 class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
-        map=[]
+        map={}
         temp=head
         while temp:
             if temp not in map:
-                map.append(temp)
+                map[temp]=1
             elif temp in map:
                 return True
             temp=temp.next
