@@ -14,7 +14,8 @@ class Solution:
             temp=temp.next
         temp=head
         i=len(stack)-1
-        while temp:
+        r=i/2
+        while i>r:
             if temp.val!=stack[i]:
                 return False
             temp=temp.next
