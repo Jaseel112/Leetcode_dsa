@@ -13,8 +13,10 @@ class Solution:
             stack.append(temp.val)
             temp=temp.next
         temp=head
+        i=len(stack)-1
         while temp:
-            if temp.val!=stack.pop():
+            if temp.val!=stack[i]:
                 return False
             temp=temp.next
+            i-=1
         return True
