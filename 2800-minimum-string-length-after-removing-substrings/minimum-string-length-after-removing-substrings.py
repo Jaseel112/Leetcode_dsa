@@ -1,9 +1,9 @@
 class Solution:
     def minLength(self, s: str) -> int:
-        stack=[s[0]]
-        for i in s[1:]:
-            if i=='B' or i=='D':
-                if stack:
+        stack=[]
+        for i in s:
+            if stack:
+                if i=='B' or i=='D':
                     if ord(stack[-1])+1==ord(i):
                         stack.pop()
                     else:
