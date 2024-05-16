@@ -14,4 +14,5 @@ class Solution:
             preorder(node.right)
             return res
         res=[]
-        return preorder(root)
+        preorder(root)
+        return res
