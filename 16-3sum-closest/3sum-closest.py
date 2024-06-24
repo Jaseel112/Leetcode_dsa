@@ -7,6 +7,8 @@ class Solution:
             k=len(nums)-1
             while(j<k):
                 s=nums[i]+nums[j]+nums[k]
+                if s==target:
+                    return s
                 if abs(target-s)<abs(target-res):
                     res=s
                 if s<target:
