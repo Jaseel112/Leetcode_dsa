@@ -6,5 +6,5 @@ class Solution:
             if sell>buy:
                 profit=max(profit,sell-buy)
             else:
-                buy =sell
+                buy=sell
         return profit
