@@ -1,10 +1,26 @@
 class Solution:
     def climbStairs(self, n: int) -> int:
-        if n==0:
-            return 1
-        num=[0]*(n+1)
-        num[0]=1
-        num[1]=1
-        for i in range(2,n+1):
-            num[i]=num[i-1]+num[i-2]
-        return num[-1]
+        @cache
+        def bfs(steps):
+            if steps==0:
+                return 1
+            if steps<0:
+                return 0
+            
+            return bfs(steps-1) + bfs(steps-2)
+        return bfs(n)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
