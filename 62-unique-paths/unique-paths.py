@@ -10,7 +10,7 @@ class Solution:
                 return 0
             a=f(i,j+1)            
             b=f(i+1,j)
-            mp[(i,j)]=mp.get((i,j),0)+a+b
+            mp[(i,j)]=a+b
             return mp[(i,j)]
         return f(0,0)
 
