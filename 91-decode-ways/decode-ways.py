@@ -22,11 +22,14 @@ class Solution:
         # return f(0)
         if s[0]=='0':
             return 0
-        dp=[0]*(len(s)+1)
+        n=len(s)
+        if n==1:
+            return 1
+        dp=[0]*(n+1)
         dp[-1]=1
-        for i in range(len(s)-1,-1,-1):
+        for i in range(n-1,-1,-1):
             if s[i]!='0':
-                if i==len(s)-1:
+                if i==n-1:
                     dp[i]=dp[i+1]
                 else:
                     if int(s[i:i+2])<27:
