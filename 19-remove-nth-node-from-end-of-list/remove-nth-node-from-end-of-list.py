@@ -16,5 +16,3 @@ class Solution:
             temp1=temp1.next
         temp1.next=temp1.next.next
         return dummy.next
-        
-        
