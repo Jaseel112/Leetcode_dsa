@@ -22,4 +22,4 @@ class Solution:
         for x in mp1.keys():
             for i in range(r):
                 matrix[i][x]=0
-        return matrix
+        # return matrix
