@@ -1,5 +1,5 @@
-class Solution:
-    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+# class Solution:
+#     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
         # mp=Counter(nums)
         # res=[]
         # ret=[]
@@ -10,14 +10,20 @@ class Solution:
         #     ret.append(res[i][1])
         # return ret
 
-        import heapq
-        mp=Counter(nums)
-        heap=[]
-        ret=[]
-        for key,val in mp.items():
-            heapq.heappush(heap,(val,key))
-            if len(heap)>k:
-                heapq.heappop(heap)
-        for i in heap:
-            ret.append(i[1])
-        return ret
+        # import heapq
+        # mp=Counter(nums)
+        # heap=[]
+        # ret=[]
+        # for key,val in mp.items():
+        #     heapq.heappush(heap,(val,key))
+        #     if len(heap)>k:
+        #         heapq.heappop(heap)
+        # for i in heap:
+        #     ret.append(i[1])
+        # return ret
+
+sys.stdout = open('user.out', 'a')
+for nums in map(loads, sys.stdin):
+    print(dumps(list(map(itemgetter(0), Counter(nums).most_common(int(sys.stdin.readline()))))))
+
+exit()
