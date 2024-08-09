@@ -15,7 +15,7 @@ class Solution:
         heap=[]
         ret=[]
         for key,val in mp.items():
-            heapq.heappush(heap,[val,key])
+            heapq.heappush(heap,(val,key))
             if len(heap)>k:
                 heapq.heappop(heap)
         for i in heap:
