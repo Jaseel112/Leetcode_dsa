@@ -17,20 +17,20 @@ class Solution:
             end=end.next
         n=j
         while start.next:
-            end=start.next
-            prev=start
+            end=start
+            prev=None
             while end.next:
-                end=end.next
-                prev=prev.next
+                prev=end
+                end=end.next 
+            if j-i<=1:
+                break                
             end.next=start.next
-            start.next=end
+            start.next=end  
             prev.next=None   
-            start=end.next
-            if j-i<=2:
-                break    
+            start=end.next          
             i+=1
-            j-=1      
-        if n%2==1:
-            prev.next=start
-            start.next=None
+            j-=1   
+        # if n%2==1:
+        #     prev.next=start
+        #     start.next=None
         return head
