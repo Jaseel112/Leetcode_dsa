@@ -15,7 +15,6 @@ class Solution:
         while end!=None:
             j+=1
             end=end.next
-        n=j
         while start.next:
             end=start
             prev=None
