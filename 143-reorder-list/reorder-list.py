@@ -23,14 +23,11 @@ class Solution:
                 prev=end
                 end=end.next 
             if j-i<=1:
-                break                
+                break           
             end.next=start.next
             start.next=end  
             prev.next=None   
             start=end.next          
             i+=1
             j-=1   
-        # if n%2==1:
-        #     prev.next=start
-        #     start.next=None
         return head
