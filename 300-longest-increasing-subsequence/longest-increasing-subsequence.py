@@ -9,3 +9,7 @@ class Solution:
                 if nums[j]<nums[i]:
                     lst[i]=max(lst[j]+1,lst[i])
         return max(lst)
+
+        # #dfs with cache
+
+        # def f()
