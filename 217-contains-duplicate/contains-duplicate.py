@@ -6,8 +6,25 @@ class Solution:
         #         return True
         #     dist.add(i)
         # return False
-        dist=set(nums)
-        if len(nums)!=len(dist):
-            return True
-        return False
-        
+        # dist=set(nums)
+        # if len(nums)!=len(dist):
+        #     return True
+        # return False
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        result=set(nums)
+        return len(nums)!=len(result)
