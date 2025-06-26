@@ -6,7 +6,7 @@ class Solution:
         for i in range(len(s)):
             if s[i] not in cset:
                 cset.add(s[i])
-                maxl=max(maxl,i-left+1)
+                maxl=max(maxl,len(cset))
             else:
                 while s[i] in cset:
                     cset.remove(s[left])
